@@ -1,11 +1,12 @@
-execute pathogen#infect()
 syntax on
+colorscheme monokai 
 filetype on
 filetype indent on
 filetype plugin on
 
-set wrap
-set textwidth=80
+set backspace=indent,eol,start
+
+set colorcolumn=81
 
 :set number
 :nmap j gj
@@ -20,16 +21,11 @@ set expandtab
 set shiftwidth=4 
 set smarttab
 
-colorscheme monokai 
-
 if has("autocmd")
     autocmd bufwritepost .vimrc source %
 endif
 
 set display+=lastline
-
-
-inoremap {<CR> {<C-o>o}<C-o>O
 
 
 function! My_Tab_Completion()
@@ -40,9 +36,10 @@ function! My_Tab_Completion()
 endfunction
 inoremap <Tab> <C-R>=My_Tab_Completion()<CR>
 
+set autowrite
 
 function! TEXSET()
-    set makeprg=if\ \[\ -f\ \"Makefile\"\ \];then\ make\ $*;else\ if\ \[\ -f\ \"makefile\"\ \];then\ make\ $*;else\ pdflatex\ -file-line-error-style\ %\ &&\ evince\ %:r.pdf;fi;fi
+    set makeprg=if\ \[\ -f\ \"Makefile\"\ \];then\ make\ $*;else\ if\ \[\ -f\ \"makefile\"\ \];then\ make\ $*;else\ pdflatex\ -file-line-error-style\ %\ &&\ open\ -g\ %:r.pdf;fi;fi
     set errorformat=%f:%l:\ %m
 endfunction
 
