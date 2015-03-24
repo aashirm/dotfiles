@@ -1,12 +1,12 @@
 syntax on
-colorscheme monokai 
 filetype on
 filetype indent on
 filetype plugin on
 
 set backspace=indent,eol,start
 
-set colorcolumn=81
+set wrap
+set textwidth=80
 
 :set number
 :nmap j gj
@@ -21,12 +21,16 @@ set expandtab
 set shiftwidth=4 
 set smarttab
 
+colorscheme monokai 
+
 if has("autocmd")
     autocmd bufwritepost .vimrc source %
 endif
 
 set display+=lastline
 
+" clears and redraws screen after search
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 function! My_Tab_Completion()
     if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
@@ -36,10 +40,9 @@ function! My_Tab_Completion()
 endfunction
 inoremap <Tab> <C-R>=My_Tab_Completion()<CR>
 
-set autowrite
 
 function! TEXSET()
-    set makeprg=if\ \[\ -f\ \"Makefile\"\ \];then\ make\ $*;else\ if\ \[\ -f\ \"makefile\"\ \];then\ make\ $*;else\ pdflatex\ -file-line-error-style\ %\ &&\ open\ -g\ %:r.pdf;fi;fi
+    set makeprg=if\ \[\ -f\ \"Makefile\"\ \];then\ make\ $*;else\ if\ \[\ -f\ \"makefile\"\ \];then\ make\ $*;else\ pdflatex\ -file-line-error-style\ %\ &&\ evince\ %:r.pdf;fi;fi
     set errorformat=%f:%l:\ %m
 endfunction
 
