@@ -6,13 +6,11 @@ filetype plugin on
 set backspace=indent,eol,start
 
 set wrap
-set textwidth=80
 
 :set number
 :nmap j gj
 :nmap k gk
 
-:set incsearch
 :set ignorecase
 :set smartcase
 
@@ -20,6 +18,8 @@ set tabstop=4
 set expandtab
 set shiftwidth=4 
 set smarttab
+
+set pastetoggle=<F2>
 
 colorscheme monokai 
 
@@ -62,3 +62,6 @@ endfunction
 autocmd FileType c call CSET()
 autocmd FileType tex call TEXSET()
 autocmd FileType python call PYSET()
+autocmd FileTYpe html setlocal shiftwidth=2 tabstop=2
+autocmd FileType json setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2

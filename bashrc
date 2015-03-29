@@ -2,16 +2,7 @@ PATH=/usr/local/git/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/u
 launchctl setenv PATH $PATH
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-[ -z "$PS1" ] && return
-# Define Color Variables for later usage
-c_red=$(tput setaf 1)
-c_green=$(tput setaf 2)
-c_yellow=$(tput setaf 3)
-c_blue=$(tput setaf 4)
-c_purple=$(tput setaf 5)
-c_cyan=$(tput setaf 6)
-c_white=$(tput setaf 7)
-c_reset=$(tput sgr1)
+#[ -z "$PS1" ] && return
 
 # Set the Prompt to be more reasonable
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
