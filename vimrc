@@ -7,12 +7,14 @@ set backspace=indent,eol,start
 
 set wrap
 
-:set number
-:nmap j gj
-:nmap k gk
+set number
+nmap j gj
+nmap k gk
 
-:set ignorecase
-:set smartcase
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
 
 set tabstop=4
 set expandtab
