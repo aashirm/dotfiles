@@ -34,6 +34,9 @@ set display+=lastline
 " clears and redraws screen after search
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
+" maps jk to esc
+inoremap jk <Esc>
+
 function! My_Tab_Completion()
     if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
         return "\<C-P>"
