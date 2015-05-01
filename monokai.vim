@@ -35,7 +35,7 @@ hi Folded       guifg=#75715E guibg=bg gui=none ctermfg=8 ctermbg=bg cterm=none
 hi FoldColumn   guifg=#75715E guibg=#3E3D32 gui=none ctermfg=8 ctermbg=9 cterm=none
 hi SignColum    guifg=#75715E guibg=#3E3D32 gui=none ctermfg=8 ctermbg=9 cterm=none
 hi IncSearch    guifg=bg guibg=#E6DB74 gui=none ctermfg=bg ctermbg=3 cterm=none
-hi LineNr       ctermfg=102 ctermbg=237 cterm=NONE guifg=#90908a guibg=#3c3d37 gui=NONE
+hi LineNr       ctermfg=255 ctermbg=None cterm=NONE guifg=#FFFFFF guibg=NONE gui=NONE
 hi MatchParen   ctermfg=197 ctermbg=NONE guifg=#f92672 guibg=NONE gui=underline
 "hi MatchParen   guifg=fg guibg=bg gui=bold ctermfg=231 ctermbg=235 cterm=bold
 hi ModeMsg      gui=none cterm=none
