@@ -1,34 +1,45 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+call vundle#end()
+
+filetype plugin indent on
 syntax on
-filetype on
-filetype indent on
-filetype plugin on
 
 set backspace=indent,eol,start
 
+" line numbers
+set number
 set wrap
 
-set number
+" intuitive cursor movement
 nmap j gj
 nmap k gk
 
-set ignorecase
+" nice search defaults
 set smartcase
 set incsearch
 set hlsearch
 
+" spacing settings
 set tabstop=4
 set expandtab
 set shiftwidth=4 
 set smarttab
 
-set pastetoggle=<F2>
-
 colorscheme monokai 
 
+" sources vimrc after write
 if has("autocmd")
     autocmd bufwritepost .vimrc source %
 endif
 
+" display long lines
 set display+=lastline
 
 " clears and redraws screen after search
@@ -37,6 +48,7 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 " maps jk to esc
 inoremap jk <Esc>
 
+" tab completion within file
 function! My_Tab_Completion()
     if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
         return "\<C-P>"
