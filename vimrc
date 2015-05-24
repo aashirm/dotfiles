@@ -5,11 +5,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 call vundle#end()
 
 filetype plugin indent on
 syntax on
+
 
 set backspace=indent,eol,start
 
