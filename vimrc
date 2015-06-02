@@ -1,3 +1,4 @@
+" Vundle initialization
 set nocompatible
 filetype off
 
@@ -6,13 +7,17 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'wakatime/vim-wakatime'
 
 call vundle#end()
 
+" normal configuration
 filetype plugin indent on
 syntax on
 
+colorscheme monokai
 
+set encoding=utf8
 set backspace=indent,eol,start
 
 " line numbers
@@ -33,8 +38,6 @@ set tabstop=4
 set expandtab
 set shiftwidth=4 
 set smarttab
-
-colorscheme monokai 
 
 " sources vimrc after write
 if has("autocmd")
