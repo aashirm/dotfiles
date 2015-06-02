@@ -11,7 +11,7 @@ Plugin 'wakatime/vim-wakatime'
 
 call vundle#end()
 
-" normal configuration
+" basic configuration
 filetype plugin indent on
 syntax on
 
@@ -47,13 +47,14 @@ endif
 " display long lines
 set display+=lastline
 
-" clears and redraws screen after search
+" clears and redraws screen after hl search
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " maps jk to esc
 inoremap jk <Esc>
 
 " tab completion within file
+" found at http://people.ksp.sk/~misof/programy/vimrc.html
 function! My_Tab_Completion()
     if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
         return "\<C-P>"
@@ -62,7 +63,7 @@ function! My_Tab_Completion()
 endfunction
 inoremap <Tab> <C-R>=My_Tab_Completion()<CR>
 
-
+" default options for making from vim
 function! TEXSET()
     set makeprg=if\ \[\ -f\ \"Makefile\"\ \];then\ make\ $*;else\ if\ \[\ -f\ \"makefile\"\ \];then\ make\ $*;else\ pdflatex\ -file-line-error-style\ %\ &&\ evince\ %:r.pdf;fi;fi
     set errorformat=%f:%l:\ %m
@@ -81,9 +82,12 @@ function! CSET()
     set tw=0
 endfunction
 
+" call correct make function
 autocmd FileType c call CSET()
 autocmd FileType tex call TEXSET()
 autocmd FileType python call PYSET()
+
+" custom tabbing for specific filetypes
 autocmd FileTYpe html setlocal shiftwidth=2 tabstop=2
 autocmd FileType json setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
