@@ -1,9 +1,9 @@
-PATH=/usr/local/git/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Users/Aashir/bin
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Users/Aashir/bin
 launchctl setenv PATH $PATH
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-export PYTHONSTARTUP=$HOME/.pythonstartup
+#export PYTHONSTARTUP=$HOME/.pythonstartup
 
 #[ -z "$PS1" ] && return
 

@@ -7,7 +7,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'wakatime/vim-wakatime'
 
 call vundle#end()
 
