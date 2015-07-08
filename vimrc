@@ -7,6 +7,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+" Plugin 'scrooloose/syntastic'
 
 call vundle#end()
 
@@ -19,9 +20,14 @@ colorscheme monokai
 set encoding=utf8
 set backspace=indent,eol,start
 
-" line numbers
+" line options
 set number
+set ruler
 set wrap
+
+" splitting defaults
+set splitbelow
+set splitright 
 
 " intuitive cursor movement
 nmap j gj
