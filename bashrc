@@ -1,4 +1,4 @@
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Users/Aashir/bin
+PATH=/Users/Aashir/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin
 launchctl setenv PATH $PATH
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -12,3 +12,4 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[0
 export HISTSIZE=
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
