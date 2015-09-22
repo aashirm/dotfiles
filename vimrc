@@ -70,7 +70,7 @@ inoremap <Tab> <C-R>=My_Tab_Completion()<CR>
 
 " default options for making from vim
 function! TEXSET()
-    set makeprg=if\ \[\ -f\ \"Makefile\"\ \];then\ make\ $*;else\ if\ \[\ -f\ \"makefile\"\ \];then\ make\ $*;else\ pdflatex\ -file-line-error-style\ %\ &&\ evince\ %:r.pdf;fi;fi
+    set makeprg=if\ \[\ -f\ \"Makefile\"\ \];then\ make\ $*;else\ if\ \[\ -f\ \"makefile\"\ \];then\ make\ $*;else\ pdflatex\ -file-line-error-style\ %\ &&\ open\ %:r.pdf\ &&\ change_focus\;fi;fi
     set errorformat=%f:%l:\ %m
 endfunction
 

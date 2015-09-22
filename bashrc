@@ -1,5 +1,9 @@
 PATH=/Users/Aashir/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin
+
+if [ -z "$TMUX" ]
+then
 launchctl setenv PATH $PATH
+fi
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
@@ -13,3 +17,4 @@ export HISTSIZE=
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
+source /usr/local/etc/bash_completion.d/*
